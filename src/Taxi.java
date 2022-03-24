@@ -7,11 +7,20 @@ public class Taxi extends Car{
         this.fareCollected = fareCollected;
     }
 
-
-    public void printTaxi()
+    @Override
+    public void printInfo()
     {
-        printCar();
+        super.printInfo();
         System.out.println("Fare Collected: " + fareCollected);
     }
 
+    public boolean chargeAndDropOffRiders(double farePerRider)
+    {
+        fareCollected+= ((getPassengers()-1) * farePerRider);
+        return dropOffPassengers(getPassengers()-1);
+    }
+
+    public double getFareCollected() {
+        return fareCollected;
+    }
 }

@@ -35,4 +35,9 @@ public class Vehicle
   public void setPassengers(int passengers) {
     this.passengers = passengers;
   }
+
+  public void printInfo()
+  {
+    System.out.println("License Plate: " + licensePlate + " \nToll Fee: " + tollFee + " \nPassengers: " + passengers);
+  }
 }
